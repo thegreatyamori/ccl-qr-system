@@ -1,25 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Qrlector from "./lector/QRLector";
+import Importcsv from "./import-csv/ImportCSV";
+import Addpeople from "./add-people/AddPeople";
+import Navigation from "./shared/BottomNavigation";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <>
+        <Switch>
+          <Route path="/new">
+            <Addpeople />
+          </Route>
+          <Route path="/import-csv">
+            <Importcsv />
+          </Route>
+          <Route exact path="*">
+            <Qrlector />
+          </Route>
+        </Switch>
+
+        <Navigation />
+      </>
+    </Router>
   );
 }
 
