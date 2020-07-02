@@ -1,4 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Cosas por añadir
+
+- Color a la bottomNavigation
+- Al recargar mantener el icono seleccionado en bottomNavigation
+- Conectar a un backend
 
 ## Available Scripts
 
