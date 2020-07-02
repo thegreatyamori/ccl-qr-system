@@ -1,6 +1,8 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "CCL QR",
+  "name": "Control de Asistencia",
+  "lang": "es-ES",
+  "orientation": "portrait",
   "icons": [
     {
       "src": "favicon.ico",
