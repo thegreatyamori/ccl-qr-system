@@ -1,13 +1,9 @@
 import Axios from "axios";
 
-let instance = Axios.create({
-  baseURL: process.env.API_URI,
-});
-
 // request header
-instance.interceptors.request.use(
+Axios.interceptors.request.use(
   (config) => {
-    config.headers = { Authorization: process.env.AUTHORIZATION };
+    config.headers = { Authorization: process.env.REACT_APP_AUTHORIZATION };
     return config;
   },
   (error) => {
@@ -16,7 +12,11 @@ instance.interceptors.request.use(
 );
 
 export const createAll = (data) => {
-  Axios.post(process.env.API_URI + "/assistants/all", data).then((resp) => {
-    console.log("Asistentes añadidos !");
-  });
+  Axios.post(process.env.REACT_APP_API_URL + "/assistants/all", data)
+    .then((resp) => {
+      console.log(resp.data);
+    })
+    .catch((err) => {
+      console.dir(err.response.data.message);
+    });
 };

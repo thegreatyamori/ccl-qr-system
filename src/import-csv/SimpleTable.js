@@ -36,8 +36,6 @@ export default function SimpleTable({ data }) {
       });
 
       // enviamos los datos a guardarse
-      console.log(_rows);
-
       createAll(_rows);
     }
   });
@@ -61,7 +59,7 @@ export default function SimpleTable({ data }) {
           {data.map((row, index) => {
             const encodedText = `${row.id},${row.nombres},${row.edad},${row.culto},${row.dia},${row.hora}`;
             return (
-              <TableRow key={row.id} id="assistant-row">
+              <TableRow key={index} id="assistant-row">
                 <TableCell component="th" scope="row">
                   {row.id}
                 </TableCell>
