@@ -4,9 +4,7 @@ import PropTypes from "prop-types";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import Dialog from "@material-ui/core/Dialog";
 
-export default function SimpleDialog(props) {
-  const { onClose, open, onCapture } = props;
-
+export default function SimpleDialog({ open, onClose, onCapture }) {
   const handleClose = () => onClose(false);
   const handleError = (err) => console.error(err);
   const handleScan = (data) => {

@@ -61,30 +61,36 @@ export const labelData = [
     gridSize: 6,
     label: "N° Asiento",
     key: "id",
+    pos: 0,
   },
   {
     gridSize: 6,
     label: "N° Culto",
     key: "culto",
+    pos: 3,
   },
   {
     gridSize: 12,
     label: "Nombres",
     key: "nombres",
+    pos: 1,
   },
   {
     gridSize: 12,
     label: "Edad",
     key: "edad",
+    pos: 2,
   },
   {
     gridSize: 6,
     label: "Día",
     key: "dia",
+    pos: 4,
   },
   {
     gridSize: 6,
     label: "Hora",
     key: "hora",
+    pos: 5,
   },
 ];

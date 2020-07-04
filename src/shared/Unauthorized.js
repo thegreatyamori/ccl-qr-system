@@ -20,6 +20,12 @@ const useStyles = makeStyles((theme) => ({
     bottom: 56,
     zIndex: -1,
   },
+  imgLg: {
+    width: "25%",
+  },
+  imgSm: {
+    width: "50%",
+  }
 }));
 
 export function UnauthorizedDesk({ text }) {
@@ -31,7 +37,7 @@ export function UnauthorizedDesk({ text }) {
           {text}
         </Typography>
       </div>
-      <img src={doge} alt="Doge" className={classes.img} />
+      <img src={doge} alt="Doge" className={`${classes.imgLg} ${classes.img}`} />
     </Container>
   );
 }
@@ -45,7 +51,11 @@ export function UnauthorizedMobile({ text }) {
           {text}
         </Typography>
       </div>
-      <img src={doge} alt="Doge" className={classes.img} />
+      <img
+        src={doge}
+        alt="Doge"
+        className={`${classes.imgSm} ${classes.img}`}
+      />
     </Container>
   );
 }

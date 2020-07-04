@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Qrlector from "./lector/QRLector";
 import Importcsv from "./import-csv/ImportCSV";
 import Addpeople from "./add-people/AddPeople";
-import Navigation from "./shared/BottomNavigation";
+import Navigation from "./shared/navigation/BottomNavigation";
 
 function App() {
   return (

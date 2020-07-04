@@ -8,10 +8,12 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import FileCopyIcon from "@material-ui/icons/FileCopy";
 import SimpleSnackbar from "../shared/SnackBar";
 import QRIcon from "../shared/QRIcon";
-import ReactVirtualizedTable from "./Table";
 import {UnauthorizedMobile} from "../shared/Unauthorized";
 import { useStyles } from "./styles";
 import { mobile } from "../shared/utils";
+// import ReactVirtualizedTable from "./Table";
+import SimpleTable from "./SimpleTable";
+// import Printed from "./Printed";
 
 export default function Importcsv() {
   const classes = useStyles();
@@ -88,7 +90,9 @@ export default function Importcsv() {
               </Button>
             </Grid>
             <Grid item xs={12}>
-              <ReactVirtualizedTable data={csv} />
+              {/* <ReactVirtualizedTable data={csv} /> */}
+              <SimpleTable data={csv} />
+              {/* <Printed data={csv} /> */}
             </Grid>
           </Grid>
         </div>
