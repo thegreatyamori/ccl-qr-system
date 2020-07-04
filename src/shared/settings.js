@@ -1,14 +1,14 @@
 export const cultos = [
-  { id: 1, dia: "Jueves", hora: "07H00 PM", isFull: false },
-  { id: 2, dia: "Viernes", hora: "06H00 PM", isFull: false },
-  { id: 3, dia: "Viernes", hora: "07H45 PM", isFull: false },
-  { id: 4, dia: "Sábado", hora: "10H30 AM", isFull: false },
-  { id: 5, dia: "Sábado", hora: "05H00 PM", isFull: true },
-  { id: 6, dia: "Sábado", hora: "07H00 PM", isFull: true },
-  { id: 7, dia: "Domingo", hora: "07H00 AM", isFull: false },
-  { id: 8, dia: "Domingo", hora: "08H45 AM", isFull: false },
-  { id: 9, dia: "Domingo", hora: "10H30 AM", isFull: true },
-  { id: 10, dia: "Domingo", hora: "12H15 AM", isFull: false },
+  { culto: 1, dia: "Jueves", hora: "07H00 PM", isFull: false },
+  { culto: 2, dia: "Viernes", hora: "06H00 PM", isFull: false },
+  { culto: 3, dia: "Viernes", hora: "07H45 PM", isFull: false },
+  { culto: 4, dia: "Sábado", hora: "10H30 AM", isFull: false },
+  { culto: 5, dia: "Sábado", hora: "05H00 PM", isFull: true },
+  { culto: 6, dia: "Sábado", hora: "07H00 PM", isFull: true },
+  { culto: 7, dia: "Domingo", hora: "07H00 AM", isFull: false },
+  { culto: 8, dia: "Domingo", hora: "08H45 AM", isFull: false },
+  { culto: 9, dia: "Domingo", hora: "10H30 AM", isFull: true },
+  { culto: 10, dia: "Domingo", hora: "12H15 AM", isFull: false },
 ];
 
 export const header = [
