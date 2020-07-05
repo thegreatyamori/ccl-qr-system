@@ -3,7 +3,11 @@ import Axios from "axios";
 // request header
 Axios.interceptors.request.use(
   (config) => {
-    config.headers = { Authorization: process.env.REACT_APP_AUTHORIZATION };
+    config.headers = {
+      Authorization: process.env.REACT_APP_AUTHORIZATION,
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
+    };
     return config;
   },
   (error) => {
