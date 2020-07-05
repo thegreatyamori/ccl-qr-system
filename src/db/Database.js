@@ -5,8 +5,8 @@ Axios.interceptors.request.use(
   (config) => {
     config.headers = {
       Authorization: process.env.REACT_APP_AUTHORIZATION,
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
+      // "Access-Control-Allow-Origin": "*",
+      // "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
     };
     return config;
   },
