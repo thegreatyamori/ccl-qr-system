@@ -1,4 +1,5 @@
 export const cultos = [
+  { culto: "", dia: "", hora: "", isFull: false },
   { culto: 1, dia: "Jueves", hora: "07H00 PM", isFull: false },
   { culto: 2, dia: "Viernes", hora: "06H00 PM", isFull: false },
   { culto: 3, dia: "Viernes", hora: "07H45 PM", isFull: false },
@@ -49,13 +50,6 @@ export const header = [
   },
 ];
 
-export const qr = {
-  typeNumber: 0,
-  errorCorrectionLevel: "M",
-  mode: "Byte",
-  multiByte: "UTF-8",
-};
-
 export const labelData = [
   {
     gridSize: 6,
@@ -94,3 +88,13 @@ export const labelData = [
     pos: 5,
   },
 ];
+
+export const formInitialState = {
+  asiento: "",
+  edad: "",
+  culto: "",
+  nombres: "",
+  lider: "",
+  dia: "",
+  hora: "",
+};

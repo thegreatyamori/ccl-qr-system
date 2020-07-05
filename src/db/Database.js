@@ -16,14 +16,16 @@ Axios.interceptors.request.use(
  *
  * @param {*} data array de asistentes
  */
-export const createAll = (data) => {
-  Axios.post(process.env.REACT_APP_API_URL + "/assistants/all", data)
-    .then((resp) => {
-      console.log(resp.data);
-    })
-    .catch((err) => {
-      console.dir(err.response.data.message);
-    });
+export const createAll = async (data) => {
+  try {
+    const res = await Axios.post(
+      process.env.REACT_APP_API_URL + "/assistants",
+      data
+    );
+    return res.data;
+  } catch (err) {
+    return err.response.data.message;
+  }
 };
 
 /**
@@ -31,12 +33,14 @@ export const createAll = (data) => {
  *
  * @param {*} data asistente
  */
-export const create = (data) => {
-  Axios.post(process.env.REACT_APP_API_URL + "/assistants", data)
-    .then((resp) => {
-      console.log(resp.data);
-    })
-    .catch((err) => {
-      console.dir(err.response.data.message);
-    });
+export const create = async (data) => {
+  try {
+    const res = await Axios.post(
+      process.env.REACT_APP_API_URL + "/assistants/create",
+      data
+    );
+    return res.data;
+  } catch (err) {
+    return err.response.data.message;
+  }
 };

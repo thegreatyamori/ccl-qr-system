@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Grid,
   FormControl,
@@ -10,16 +10,24 @@ import {
 import { cultos } from "../shared/settings";
 import { useStyles } from "./styles";
 
-export default function Spinner({ onSelect }) {
+export default function Spinner({ onSelect, value }) {
   const classes = useStyles();
-  const [culto, setCulto] = useState("");
+  const [culto, setCulto] = useState(value);
 
   const handleSelect = (e) => {
     const el = e.target.value;
-    const {isFull, ...rest} = cultos[el];
     setCulto(el);
-    onSelect(rest);
+    if (el !== "") {
+      const { isFull, ...rest } = cultos[el];
+      onSelect(rest);
+    }
   };
+
+  useEffect(() => {
+    if (value === "") {
+      setCulto(value);
+    }
+  }, [value])
 
   return (
     <Grid item xs={12}>
@@ -35,13 +43,17 @@ export default function Spinner({ onSelect }) {
         >
           {cultos.map((item) => (
             <MenuItem value={item.culto} key={item.culto}>
-              <span className={item.isFull ? classes.red : classes.green}>
-                {item.dia}
-                {" - "}
-                <Typography variant="overline" display="inline">
-                  {item.hora}
-                </Typography>
-              </span>
+              {item.culto === "" ? (
+                <em>Ninguno</em>
+              ) : (
+                <span className={item.isFull ? classes.red : classes.green}>
+                  {item.dia}
+                  {" - "}
+                  <Typography variant="overline" display="inline">
+                    {item.hora}
+                  </Typography>
+                </span>
+              )}
             </MenuItem>
           ))}
         </Select>

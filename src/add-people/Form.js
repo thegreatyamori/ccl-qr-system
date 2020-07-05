@@ -51,6 +51,7 @@ export default function Form({
                 variant="outlined"
                 label="Edad"
                 onChange={_handleChange}
+                value={values.edad}
                 fullWidth
               />
             </Grid>
@@ -62,11 +63,12 @@ export default function Form({
                 variant="outlined"
                 label="Asiento"
                 onChange={_handleChange}
+                value={values.asiento}
                 fullWidth
                 required
               />
             </Grid>
-            <Spinner onSelect={_handleSelect} />
+            <Spinner onSelect={_handleSelect} value={values.culto} />
           </Grid>
         </Grid>
         <Grid item xs={6}>

@@ -1,22 +1,12 @@
 import React, { Component } from "react";
 import Form from "./Form";
 
-const initialState = {
-  asiento: null,
-  edad: null,
-  culto: null,
-  nombres: "",
-  lider: "",
-  dia: "",
-  hora: "",
-};
-
-const FormControlled = (Form, initialState) =>
+const FormControlled = (Form) =>
   class FormWithControlled extends Component {
     constructor(props) {
       super(props);
       this.state = {
-        ...initialState,
+        ...props.values,
       };
     }
 
@@ -28,12 +18,15 @@ const FormControlled = (Form, initialState) =>
       const { name, value } = e.target;
       this.setState({ [name]: value });
     };
-
+    
     handleSubmit = (e) => {
       e.preventDefault();
       const qr = document.querySelector("#qr").toDataURL();
-
+      
       this.props.handleSubmit({ ...this.state, qr });
+
+      // vaciamos el state
+      this.setState(this.props.values);
     };
 
     render() {
@@ -51,4 +44,4 @@ const FormControlled = (Form, initialState) =>
     }
   };
 
-export default FormControlled(Form, initialState);
+export default FormControlled(Form);
