@@ -2,8 +2,11 @@ import React from "react";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import { useStyles } from "./styles";
+import { UnauthorizedMobile } from "../shared/Unauthorized";
 import FormControlled from "./withFormControlled";
+import { mobile } from "../shared/utils";
+import { useStyles } from "./styles";
+import ListButton from "../shared/Fab";
 
 export default function Addpeople() {
   const classes = useStyles();
@@ -12,7 +15,9 @@ export default function Addpeople() {
     alert(JSON.stringify(formValues));
   };
 
-  return (
+  return mobile === "i" || mobile === "a" ? (
+    <UnauthorizedMobile text="Solo secretaria tiene acceso a este contenido!" />
+  ) : (
     <Container component="main" maxWidth="sm">
       <CssBaseline />
       <div className={classes.paper}>
@@ -23,6 +28,7 @@ export default function Addpeople() {
         </Typography>
         <FormControlled handleSubmit={handleSubmit} />
       </div>
+      <ListButton />
     </Container>
   );
 }

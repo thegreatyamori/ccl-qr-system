@@ -22,8 +22,8 @@ export default function Info({ asistente }) {
   const sections = [
     items.slice(2, 3),
     items.slice(3, 4),
-    items.slice(0, 2),
     items.slice(4),
+    items.slice(0, 2),
   ];
 
   return sections.map((section, index) => (
