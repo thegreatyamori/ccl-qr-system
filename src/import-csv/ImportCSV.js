@@ -11,8 +11,6 @@ import { UnauthorizedMobile } from "../shared/Unauthorized";
 import { mobile } from "../shared/utils";
 import QRIcon from "../shared/QRIcon";
 import { useStyles } from "./styles";
-// import ReactVirtualizedTable from "./Table";
-// import Printed from "./Printed";
 import SimpleTable from "./SimpleTable";
 import ListButton from "../shared/Fab";
 
@@ -93,9 +91,7 @@ export default function Importcsv() {
               </Button>
             </Grid>
             <Grid item xs={12}>
-              {/* <ReactVirtualizedTable data={csv} /> */}
               <SimpleTable data={csv} />
-              {/* <Printed data={csv} /> */}
             </Grid>
           </Grid>
         </div>
