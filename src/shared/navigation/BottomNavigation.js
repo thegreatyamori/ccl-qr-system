@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import BottomNavigation from "@material-ui/core/BottomNavigation";
-import GroupAddIcon from "@material-ui/icons/GroupAdd";
+import PersonAdd from "@material-ui/icons/PersonAdd";
 import PostAddIcon from "@material-ui/icons/PostAdd";
 import ScanIcon from "../ScanIcon";
 import { BottomNavigationAction } from "@material-ui/core";
@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
 
 const navigation = [
   { pathname: "/", label: "Verificar", icon: <ScanIcon /> },
-  { pathname: "/new", label: "Asistente", icon: <GroupAddIcon /> },
+  { pathname: "/new", label: "Asistente", icon: <PersonAdd /> },
   { pathname: "/import-csv", label: "Importar", icon: <PostAddIcon /> },
 ];
 

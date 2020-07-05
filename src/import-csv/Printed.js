@@ -26,7 +26,6 @@ export default function Printed({ data }) {
     <Grid container spacing={2}>
       {data.map((row, index) => {
         const encodedText = `${row.id},${row.nombres},${row.edad},${row.culto},${row.dia},${row.hora}`;
-
         return (
           <Grid item xs={3} key={row.id} className={classes.flex}>
             <QRCode value={encodedText} size={250} renderAs="svg" />

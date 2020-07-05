@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useSnackbar } from "notistack";
 import { makeStyles } from "@material-ui/core/styles";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
@@ -22,6 +23,7 @@ const useStyles = makeStyles({
 
 export default function SimpleTable({ data }) {
   const classes = useStyles();
+  const { enqueueSnackbar } = useSnackbar();
 
   useEffect(() => {
     const rows = document.querySelectorAll("#assistant-row canvas#qr");
@@ -36,7 +38,13 @@ export default function SimpleTable({ data }) {
       });
 
       // enviamos los datos a guardarse
-      createAll(_rows);
+      createAll(_rows)
+        .then((msg) => {
+          enqueueSnackbar(msg, { variant: "success" });
+        })
+        .catch((msg) => {
+          enqueueSnackbar(msg, { variant: "error" });
+        });
     }
   });
 

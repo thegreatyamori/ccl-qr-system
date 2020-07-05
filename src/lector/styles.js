@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core";
 export const useStyles = makeStyles((theme) => ({
   container: {
     paddingTop: 16,
+    paddingBottom: 56,
   },
   img: {
     width: "100%",
@@ -21,7 +22,7 @@ export const useStyles = makeStyles((theme) => ({
     marginBottom: 10,
   },
   fab: {
-    position: "absolute",
+    position: "fixed",
     bottom: theme.spacing(8),
     right: theme.spacing(2),
   },
