@@ -7,12 +7,14 @@ import FormControlled from "./withFormControlled";
 import { mobile } from "../shared/utils";
 import { useStyles } from "./styles";
 import ListButton from "../shared/Fab";
+import { create } from "../db/Database";
 
 export default function Addpeople() {
   const classes = useStyles();
 
   const handleSubmit = (formValues) => {
-    alert(JSON.stringify(formValues));
+    // enviamos los datos a guardarse
+    create(formValues);
   };
 
   return mobile === "i" || mobile === "a" ? (
