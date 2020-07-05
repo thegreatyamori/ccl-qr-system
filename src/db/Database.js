@@ -7,6 +7,7 @@ Axios.interceptors.request.use(
       Authorization: process.env.REACT_APP_AUTHORIZATION,
       // "Access-Control-Allow-Origin": "*",
       // "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
+      "Content-Type": "application/json",
     };
     return config;
   },

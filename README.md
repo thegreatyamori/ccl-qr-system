@@ -1,8 +1,7 @@
 ## Cosas por añadir
 
-- Color a la bottomNavigation
-- Al recargar mantener el icono seleccionado en bottomNavigation
-- Conectar a un backend
+- Validar edad [10:80] y asiento [1:102]
+- Mostrar una lista de asistentes
 
 ## Available Scripts
 
