@@ -22,6 +22,8 @@ export default function Importcsv() {
   const [btnDisabled, setBtnDisabled] = useState(false);
 
   const handleCsv = (data, fileInfo) => {
+    // seteamos csv a []
+    setCsv([]);
     setData(data);
     if (data.length !== 0) {
       setBtnDisabled(true);

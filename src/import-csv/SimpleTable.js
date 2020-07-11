@@ -33,11 +33,13 @@ export default function SimpleTable({ data }) {
         const canvasDataUrl = row.toDataURL();
         _rows.push({
           ...data[index],
+          asiento: data[index].id,
           qr: canvasDataUrl,
         });
       });
 
       // enviamos los datos a guardarse
+      enqueueSnackbar("Procesando, espera un momento ...", { variant: "info" });
       createAll(_rows)
         .then((msg) => {
           enqueueSnackbar(msg, { variant: "success" });
