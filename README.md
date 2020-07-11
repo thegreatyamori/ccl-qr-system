@@ -1,7 +1,11 @@
 ## Cosas por añadir
 
 - Validar edad [10:80] y asiento [1:102]
-- Mostrar una lista de asistentes
+- Permitir la busqueda de asistentes
+- Añadir un loader en la carga csv
+- Añadir un loader en la consulta de asistentes
+- Añadir un login
+
 
 ## Available Scripts
 

@@ -6,6 +6,7 @@ export const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    paddingBottom: 56,
   },
   w100: {
     width: "100%",
@@ -13,10 +14,23 @@ export const useStyles = makeStyles((theme) => ({
   form: {
     marginTop: theme.spacing(3),
   },
-  red: {
-    color: "red",
+  table: {
+    minWidth: 650,
   },
-  green: {
-    color: "green",
+  toolbar: {
+    paddingLeft: theme.spacing(2),
+    paddingRight: theme.spacing(1),
   },
+  title: {
+    flex: "1 1 100%",
+  },
+  labelContent: {
+    display: "flex",
+  },
+  icon: {
+    marginLeft: 8,
+  },
+  qr: {
+    width: 60,
+  }
 }));

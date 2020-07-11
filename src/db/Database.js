@@ -49,3 +49,22 @@ export const create = async (data) => {
     return err.response.data.message;
   }
 };
+
+/**
+ * consulta los asistente segun el culto
+ *
+ * @param {*} culto asistente
+ */
+export const all = async (culto) => {
+  try {
+    const opts = { params: { culto } };
+    const res = await Axios.get(
+      process.env.REACT_APP_API_URL + "/assistants",
+      opts
+    );
+
+    return res.data;
+  } catch (err) {
+    return err.response.data.message;
+  }
+};
